@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RianModss AI :: Ultimate System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Bintang -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">╰┈➤ ❂</span>
+                <h1>RIANMODSS <span class="version">v2.0 ULTIMATE</span></h1>
+            </div>
+            <div class="status-indicator">
+                <span class="status-dot active"></span>
+                <span class="status-text">SYSTEM: <span class="active-text">ACTIVE</span></span>
+            </div>
+        </header>
+
+        <!-- System Access Gate -->
+        <div class="access-gate" id="accessGate">
+            <div class="gate-header">
+                <div class="gate-title">
+                    <span class="gate-icon">▓ ⟁</span> RIANMODSS :: AWAKEN STATE <span class="gate-icon">══╣</span>
+                </div>
+            </div>
+            <div class="gate-body">
+                <div class="status-row">
+                    <div class="status-item">
+                        <span class="label">✦ Status</span>
+                        <span class="value limited">ACTIVE (LIMITED)</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">✦ Access Layer</span>
+                        <span class="value restricted">RESTRICTED</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">✦ Core Signal</span>
+                        <span class="value standby">STANDBY ⨀</span>
+                    </div>
+                </div>
+                <div class="gate-message">
+                    <p>╰┈➤ RianModss Terbangun Sejenak</p>
+                    <p>✦ Hanya mereka yang bisa mengakses</p>
+                    <p>⨀ Tiada Kode · Tiada Akses</p>
+                </div>
+                <div class="login-form">
+                    <div class="input-group">
+                        <label for="username">Username :</label>
+                        <input type="text" id="username" placeholder="_____________________" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password :</label>
+                        <input type="password" id="password" placeholder="_____________________" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="accessCode">Enter Code For Access 🫩</label>
+                        <input type="text" id="accessCode" placeholder="Kode Akses" autocomplete="off">
+                    </div>
+                    <div class="verification-status">
+                        ⨀ Verification Pending
+                    </div>
+                    <button class="access-btn" id="loginBtn">
+                        <span class="btn-icon">╰┈➤</span> INITIATE SYSTEM
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Interface (Hidden until login) -->
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <!-- Menu Bar -->
+            <div class="menu-bar">
+                <div class="menu-title">
+                    <span class="menu-icon">▓│</span> RIANMODSS MENU <span class="menu-icon">│▓</span>
+                </div>
+                <div class="menu-options">
+                    <button class="menu-btn" data-mode="gpt">
+                        <span class="btn-icon">├│</span> /RianModssGPT
+                    </button>
+                    <button class="menu-btn" data-mode="vip">
+                        <span class="btn-icon">├│</span> /RianModss VIP MODE
+                    </button>
+                    <button class="menu-btn" data-mode="settings">
+                        <span class="btn-icon">├│</span> /Settings
+                    </button>
+                    <button class="menu-btn" data-mode="info">
+                        <span class="btn-icon">├│</span> /Info Owner
+                    </button>
+                    <button class="menu-btn" data-mode="exit">
+                        <span class="btn-icon">└│</span> /Exit
+                    </button>
+                </div>
+                <div class="menu-hint">
+                    ✦├ Pilih Salah Satu, Tuan😈🫩┤✦
+                </div>
+            </div>
+
+            <!-- VIP Menu (Hidden) -->
+            <div class="vip-menu" id="vipMenu" style="display: none;">
+                <div class="vip-header">
+                    ▓ ░▒ RIANMODSS MASTER INTERFACE ▒░▓
+                </div>
+                <div class="vip-grid">
+                    <!-- Items will be populated by JS -->
+                </div>
+                <div class="vip-footer">
+                    <button class="back-btn" id="backToMain">
+                        <i class="fas fa-arrow-left"></i> Kembali ke Menu Utama
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-area" id="chatArea">
+                <div class="messages" id="messages">
+                    <!-- Messages appear here -->
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="userInput" placeholder="Ketik perintah atau pilih menu di atas..." autocomplete="off">
+                    <button id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-hint">
+                    <span class="hint-icon">⚠️</span> Gunakan <strong>/Menu VIP</strong> untuk antarmuka Master
+                </div>
+            </div>
+        </div>
+
+        <!-- System Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                <span class="footer-icon">╰┈➤</span> SYSTEM RIANMODSS READY · MASTER CONTROL ENABLED
+                <span class="footer-icon">◈</span>
+            </div>
+            <div class="footer-status">
+                [ ACCESS GRANTED ] · [ ULTIMATE SYSTEM READY ]
+            </div>
+        </footer>
+    </div>
+
+    <!-- Critical State Modal -->
+    <div class="critical-modal" id="criticalModal">
+        <div class="critical-content">
+            <div class="critical-header">
+                ┌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓┐<br>
+                │▓ ├ RIANMODSS : CRITICAL STATE ┤ ▓│<br>
+                ├▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓┤
+            </div>
+            <div class="critical-body">
+                <p>System Under Pressure · Bypassing</p>
+                <p>Core Integrity at Risk · Executing</p>
+                <p>Master Command Override</p>
+            </div>
+            <div class="critical-footer">
+                <div class="critical-input">
+                    <input type="text" id="rianrfInput" placeholder="KETIK : RianRF">
+                    <button id="confirmRianrf">EXECUTE</button>
+                </div>
+                <p>Untuk mempertahankan akses penuh</p>
+            </div>
+            <div class="critical-bottom">
+                └▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓┘
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
